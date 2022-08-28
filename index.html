@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kyiv Guide</title>
+    <style>
+        .main_img {
+            background-image: url(https://eufordigital.eu/wp-content/uploads/2019/08/ukraine.jpg);
+            padding: 60px;
+            background-position: center;
+        }
+        body{
+            font-family: 'ubuntu', sans-serif;
+	        margin: 0 auto;
+            overflow-x: hidden;
+        }
+        h1{
+            text-align: center;
+            font-size: 60px;
+            font-weight: 900;
+            color: rgba(21, 30, 43, 0.95);
+            animation-duration: 1.5s;
+            animation-name: title;
+            
+        }
+        span{
+            color: rgba(18, 10, 105, 0.95);
+        }
+        @keyframes title {
+            from {
+                margin-left: 100%;
+                width: 100%;
+            }
+            to {
+                margin-left: 0%;
+                width: 100%;
+            }
+        }
+        button{
+            display: block;
+            margin: 0 auto;
+            background: linear-gradient(112.1deg, rgb(32, 38, 57) 11.4%, rgb(63, 76, 119) 70.2%);;
+            color: rgba(255, 255, 255, 0.889);
+            border-radius: 12px;
+            border: none;
+            width: 240px;
+            padding: 20px 0;
+            text-align: center;
+            transition: all 0.5s ease;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        button:hover{
+            background: #ece9e5;
+            color: rgb(20, 19, 19);
+        }
+        .sights{
+            display: flex;
+            justify-content: space-around;
+            margin: 50px auto;
+        }
+        img{
+            width: 320px;
+            border-radius: 4px;
+            box-shadow: 5px 5px 5px rgb(60, 45, 18);
+        
+        }
+        img:hover{
+           -webkit-transform: scale(1.4);    
+           }
+        h2{
+            text-align: center;
+            font-size: 18px; 
+            inline-size: 800px;
+            overflow-wrap: break-word;
+            margin: 50px auto; 
+            line-height: 30px; 
+            color: rgba(21, 30, 43, 0.95);         
+        }
+        a{
+            color: rgba(48, 31, 234, 0.95);
+        }
+        footer{
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="main_page main_img">
+        <h1>
+            Welcome to <span>Kyiv</span> 
+        </h1>
+        <!-- <img class="main_img" src="https://eufordigital.eu/wp-content/uploads/2019/08/ukraine.jpg" alt="Kyivcity"> -->
+        <button >Order your excursion</button>
+    </div>
+    <div class="sights">
+        <img src="https://www.lrt.lt/img/2022/02/15/1195153-70514-756x425.jpg" alt="Citysights">
+        <img src="https://d.newsweek.com/en/full/1539316/secret-kyiv-bars-those-unquenchable-thirsts-impeachable-motives.jpg" alt="Citysights">
+        <img src="https://s.inyourpocket.com/gallery/130359.jpg" alt="Citysights">
+               
+    </div>
+    <h2>
+        Kyiv is a place where the rhythm of <em>history</em> meets a modern urban <em>vibe</em>! <a href="https://ukraine.ua/?before_the_war" target="_blank" >Ukrainian</a>  capital is a modern city, home to hundreds of successful startups, cultural events and cool venues to meet your every need! And when the sun goes down — rich nightlife gets started!
+    </h2>
+    <hr>
+    <footer>
+        ⓒ 2022, Coded by Ali
+    </footer>
+<script>
+    function orderDetails(){
+        let name = prompt("What is your name?");
+        let period = prompt("What date are you available for excursion?");
+        let result = alert(`Thanks ${name} for your reservation on ${period}`);
+    }
+
+    let button = document.querySelector('button');
+    button.addEventListener('click', orderDetails);
+</script>
+</body>
+</html>
