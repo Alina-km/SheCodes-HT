@@ -152,9 +152,9 @@
         align-content: space-between; 
     }
     h2{
-        inline-size: 180px;
+        inline-size: 170px;
         font-size: 12px; 
-        line-height: 15px;     
+        line-height: 18px;     
     } 
     img{
         width: 90%;
@@ -169,10 +169,22 @@
     h1{
         font-size: 40px;
         font-weight: 800;
+        animation-duration: 1.0s;
+        animation-name: title;
+    }
+    @keyframes title {
+            from {
+                margin-top: 100%;
+                
+            }
+            to {
+                margin-top: 0%;
+              
+            }
     }
     footer{
-            font-size: 10px;
-        }
+        font-size: 10px;
+    }
 }
 
     </style>
