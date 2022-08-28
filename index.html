@@ -6,16 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kyiv Guide</title>
     <style>
-        .main_img {
-            background-image: url(https://eufordigital.eu/wp-content/uploads/2019/08/ukraine.jpg);
-            padding: 60px;
-            background-position: center;
-        }
+        
         body{
             font-family: 'ubuntu', sans-serif;
 	        margin: 0 auto;
             overflow-x: hidden;
         }
+        .main_img {
+            background-image: url(https://eufordigital.eu/wp-content/uploads/2019/08/ukraine.jpg);
+            padding: 60px;
+            background-position: center;
+            
+        }
+        
         h1{
             text-align: center;
             font-size: 60px;
@@ -23,7 +26,6 @@
             color: rgba(21, 30, 43, 0.95);
             animation-duration: 1.5s;
             animation-name: title;
-            
         }
         span{
             color: rgba(18, 10, 105, 0.95);
@@ -66,7 +68,8 @@
             width: 320px;
             border-radius: 4px;
             box-shadow: 5px 5px 5px rgb(60, 45, 18);
-        
+            max-width:100%;
+            height:auto;
         }
         img:hover{
            -webkit-transform: scale(1.4);    
@@ -87,25 +90,109 @@
             text-align: center;
         }
 
+        
+/*Responsive*/
+
+
+/* 992px - 1200px */
+@media screen and (max-width: 1200px) {
+	.container {
+		width: 960px;
+	}
+}
+
+/* 768px - 992px */
+@media screen and (max-width: 992px) {
+	.container {
+		width: 720px;
+	}
+    img{
+        width: 220px;
+    }
+    h2{
+        inline-size: 550px;
+        font-size: 14px; 
+         
+    }    
+	
+}
+
+/* 576px - 768px */
+@media screen and (max-width: 768px) {
+	.container {
+		width: 540px;
+	}
+    button{
+        width: 200px;
+        padding: 20px 0;
+        font-size: 16px;
+        font-weight: bold;
+    }
+    h1{
+        font-size: 50px;
+        font-weight: 800;
+    }
+	
+}
+
+/* 320px - 576px */
+@media screen and (max-width: 576px) {
+	.container {
+		width: 90%;
+	}
+    .phone-adaptive{
+        display: flex;
+        justify-content: space-around;
+        align-items:center;
+    }
+    .sights{
+        flex-direction: column;  
+    }
+    h2{
+        inline-size: 200px;
+        font-size: 12px; 
+        line-height: 15px;     
+    } 
+    img{
+        width: 120px;
+        
+    }
+    button{
+        width: 120px;
+        padding: 15px 0;
+        font-size: 13px;
+        font-weight: bold;
+    }
+    h1{
+        font-size: 40px;
+        font-weight: 800;
+    }
+}
+
     </style>
 </head>
 <body>
-    <div class="main_page main_img">
+    <div class="main_page main_img container">
         <h1>
             Welcome to <span>Kyiv</span> 
         </h1>
         <!-- <img class="main_img" src="https://eufordigital.eu/wp-content/uploads/2019/08/ukraine.jpg" alt="Kyivcity"> -->
         <button >Order your excursion</button>
     </div>
-    <div class="sights">
-        <img src="https://www.lrt.lt/img/2022/02/15/1195153-70514-756x425.jpg" alt="Citysights">
-        <img src="https://d.newsweek.com/en/full/1539316/secret-kyiv-bars-those-unquenchable-thirsts-impeachable-motives.jpg" alt="Citysights">
-        <img src="https://s.inyourpocket.com/gallery/130359.jpg" alt="Citysights">
-               
+    <div class="phone-adaptive">
+        <div class="sights container">
+            <img src="https://www.lrt.lt/img/2022/02/15/1195153-70514-756x425.jpg" alt="Citysights">
+            <img src="https://d.newsweek.com/en/full/1539316/secret-kyiv-bars-those-unquenchable-thirsts-impeachable-motives.jpg" alt="Citysights">
+            <img src="https://s.inyourpocket.com/gallery/130359.jpg" alt="Citysights">
+                   
+        </div>
+        <div>
+            <h2>
+                Kyiv is a place where the rhythm of <em>history</em> meets a modern urban <em>vibe</em>! <a href="https://ukraine.ua/?before_the_war" target="_blank" >Ukrainian</a>  capital is a modern city, home to hundreds of successful startups, cultural events and cool venues to meet your every need! And when the sun goes down — rich nightlife gets started!
+            </h2>
+        </div>
     </div>
-    <h2>
-        Kyiv is a place where the rhythm of <em>history</em> meets a modern urban <em>vibe</em>! <a href="https://ukraine.ua/?before_the_war" target="_blank" >Ukrainian</a>  capital is a modern city, home to hundreds of successful startups, cultural events and cool venues to meet your every need! And when the sun goes down — rich nightlife gets started!
-    </h2>
+
     <hr>
     <footer>
         ⓒ 2022, Coded by Ali
